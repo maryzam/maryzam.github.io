@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-02-16 — Landing Page Redesign
+
+### Design
+- Complete visual redesign: dark background (#0D0D0D) with vibrant gradient accents (magenta/coral/purple)
+- New typography system: Space Grotesk (headings), Inter (body), JetBrains Mono (monospace accents)
+- Oversized gradient text effect on name (white → magenta → coral)
+- Animated gradient ring around profile photo (magenta → purple → coral, 8s rotation)
+- Pulsing radial glow behind photo
+- Staggered fade-in animations for hero, about, and links sections
+- Card-style link buttons with lift-on-hover and magenta glow shadow
+- Pill-shaped credential/skill badges with hover effects
+
+### Content
+- Updated role: "Senior Web Developer" → "Software Engineer at Atlassian"
+- Added tagline: "Simple solutions to complex software problems."
+- Added location: Auckland, New Zealand
+- Added badges: AWS Certified Solutions Architect, Data Visualization, Viz for Social Good
+- Replaced X/Twitter link with GitHub (github.com/maryzam)
+- Updated LinkedIn URL to nz.linkedin.com/in/maryzam
+
+### Structure
+- New semantic HTML: header (hero) / main (about) / footer (links)
+- Clean 24×24 stroke-style SVG icons (Feather-style) replacing filled circle icons
+- Added aria-labels on link cards and aria-hidden on decorative elements
+- Added focus-visible styles for keyboard navigation
+
+### Responsive & Accessibility
+- Mobile breakpoint at 640px: stacked hero, centered badges, full-width link cards
+- Fluid typography with clamp() for hero name
+- `prefers-reduced-motion` media query disables all animations
+- Font preconnect hints for faster loading
+
 ## 2026-02-16 — Technical Modernization & Bug Fixes
 
 ### Bug Fixes
