@@ -1,10 +1,18 @@
+:root {
+	--color-text: #fff;
+	--color-bg: #1fc8db;
+	--color-gradient-1: #23A6D5;
+	--color-gradient-2: #23D5AB;
+	--color-border: rgba(255, 255, 255, 0.25);
+	--color-shadow: rgba(0, 0, 0, 0.25);
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	overflow: hidden;
 	font-family: 'Roboto', sans-serif;
-	color: #fff;
+	color: var(--color-text);
 }
 
 html, body {
@@ -13,8 +21,8 @@ html, body {
 }
 
 .gradient_page {
-	background-color: #1fc8db;
-	background-image: linear-gradient(-45deg, #23A6D5, #23D5AB, #23A6D5);
+	background-color: var(--color-bg);
+	background-image: linear-gradient(-45deg, var(--color-gradient-1), var(--color-gradient-2), var(--color-gradient-1));
 }
 
 .main {
@@ -35,8 +43,8 @@ html, body {
 	width: 15%;
 	border: 7px solid; 
 	border-radius: 50%;
-	border-color: rgba(255, 255, 255, 0.25);
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+	border-color: var(--color-border);
+	box-shadow: 0px 0px 5px 0px var(--color-shadow);
 }
 
 .overview {
@@ -49,13 +57,13 @@ html, body {
 }
 
 .name {
-	width: 50%:;
+	width: 50%;
 	padding: 10px;
 	text-align: right;
 	flex: 1 1;
 
 	border-style: solid;
-	border-color: #fff;
+	border-color: var(--color-text);
 	border-width: 0 0.5px 0 0;
 }
 
@@ -88,14 +96,14 @@ html, body {
 
 	border: 3px solid; 
 	border-radius: 50%;
-	border-color: rgba(255, 255, 255, 0.25);
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+	border-color: var(--color-border);
+	box-shadow: 0px 0px 5px 0px var(--color-shadow);
 
 	margin: 5px;
 }
 
 .link_button svg {
-	fill: #fff;
+	fill: var(--color-text);
 	opacity: 0.8;
 	width: 32px;
 	height: 32px;
@@ -103,4 +111,27 @@ html, body {
 
 .link_button:hover svg {
 	opacity: 1;
+}
+
+@media (max-width: 600px) {
+	.avatar_img {
+		width: 40%;
+	}
+
+	.overview {
+		flex-direction: column;
+	}
+
+	.name {
+		width: 100%;
+		text-align: center;
+		border-width: 0 0 0.5px 0;
+		padding-bottom: 15px;
+	}
+
+	.description {
+		width: 100%;
+		text-align: center;
+		padding-top: 15px;
+	}
 }
